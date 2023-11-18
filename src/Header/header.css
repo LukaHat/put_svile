@@ -1,10 +1,16 @@
 header {
+  background-color: white;
   border-bottom: 2px solid #4169e1;
+  height: 10vh;
+  width: 100%;
+  position: absolute;
 }
 header .header-links {
   display: flex;
   justify-content: space-between;
-  margin: 0.5% 15% 0 10%;
+  margin: 0 15% 0 10%;
+  height: 4.5vh;
+  margin-top: 0.5vh;
 }
 header .header-links .main-logo {
   height: 4vh;
@@ -24,6 +30,9 @@ header .main-nav {
   justify-content: space-between;
   margin: 0 10%;
   width: 80%;
+  font-weight: bold;
+  height: 50%;
+  height: 5vh;
 }
 header .main-nav #active {
   background-color: #4169e1;
@@ -33,10 +42,14 @@ header .main-nav .nav-link {
   background-color: white;
   color: #4169e1;
   flex-grow: 100;
-  padding: 1vh 0;
-  text-align: center;
+  padding: 10px 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 header .main-nav .nav-link:hover {
   background-color: #4169e1;
   color: white;
+  transition: 0.5s;
 }/*# sourceMappingURL=header.css.map */

@@ -2,11 +2,17 @@
 @import '../style/variables'
 
 header
+    background-color: white
     border-bottom: 2px solid $main-color
+    height: 10vh
+    width: 100%
+    position: absolute
     .header-links
         display: flex
         justify-content: space-between
-        margin: 0.5% 15% 0 10%
+        margin: 0 15% 0 10%
+        height: 4.5vh
+        margin-top: 0.5vh 
         .main-logo
             height: 4vh
         .header-social-links
@@ -22,6 +28,9 @@ header
         justify-content: space-between
         margin: 0 10%
         width: 80%
+        font-weight: bold
+        height: 50%
+        height: 5vh
         #active
             background-color: $main-color
             color: white
@@ -29,9 +38,13 @@ header
             background-color: white
             color: $main-color
             flex-grow: 100
-            padding: 1vh 0
-            text-align: center
+            padding: 10px 0
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
             &:hover
                 background-color: $main-color
                 color: white
+                transition: 0.5s
                 
