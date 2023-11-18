@@ -1,0 +1,37 @@
+@import '../style/mixins'
+@import '../style/variables'
+
+header
+    border-bottom: 2px solid $main-color
+    .header-links
+        display: flex
+        justify-content: space-between
+        margin: 0.5% 15% 0 10%
+        .main-logo
+            height: 4vh
+        .header-social-links
+            display: flex
+            justify-content: space-around
+            gap: 15%
+            .header-social-link
+                height: 2vh
+                width: auto
+    .main-nav
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin: 0 10%
+        width: 80%
+        #active
+            background-color: $main-color
+            color: white
+        .nav-link
+            background-color: white
+            color: $main-color
+            flex-grow: 100
+            padding: 1vh 0
+            text-align: center
+            &:hover
+                background-color: $main-color
+                color: white
+                
