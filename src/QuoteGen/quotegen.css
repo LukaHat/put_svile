@@ -1,1 +1,42 @@
-/*# sourceMappingURL=quotegen.css.map */
+.quote-boxes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quote-boxes .quote-img {
+  width: 40%;
+  padding: 10%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .close-button {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  cursor: pointer;
+  color: white;
+  font-size: 2em;
+  height: 10vh;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-closed {
+  display: none;
+}
+.modal-closed .close-button {
+  display: none;
+}/*# sourceMappingURL=quotegen.css.map */
