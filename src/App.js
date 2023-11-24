@@ -3,6 +3,7 @@ import { Vilijun } from "./Vilijun/Vilijun";
 import { QuoteGen } from "./QuoteGen/QuoteGen";
 import style from "./style/main.css";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { HrvatskaKulturnaPutovnica } from "./HrvatskaKulturnaPutovnica/HrvatskaKulturnaPutovnica";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
               process.env.PUBLIC_URL + "/assets/pozadina/pozadina4.jpg"
             })`,
             backgroundSize: "cover",
+            backgroundPosition: "center",
             margin: "0 auto",
           }}
         >
@@ -25,9 +27,10 @@ function App() {
           offset={1}
           style={{
             backgroundImage: `url(${
-              process.env.PUBLIC_URL + "/assets/pozadina/pozadina4.jpg"
+              process.env.PUBLIC_URL + "/assets/pozadina/pozadina7.webp"
             })`,
             backgroundSize: "cover",
+            backgroundPosition: "center",
             margin: "0 auto",
           }}
         >
@@ -38,13 +41,14 @@ function App() {
           offset={2}
           style={{
             backgroundImage: `url(${
-              process.env.PUBLIC_URL + "/assets/pozadina/pozadina4.jpg"
+              process.env.PUBLIC_URL + "/assets/pozadina/pozadina3.svg"
             })`,
             backgroundSize: "cover",
+            backgroundPosition: "center",
             margin: "0 auto",
           }}
         >
-          <h1>Hello World3</h1>
+          <HrvatskaKulturnaPutovnica />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -54,6 +58,7 @@ function App() {
               process.env.PUBLIC_URL + "/assets/pozadina/pozadina4.jpg"
             })`,
             backgroundSize: "cover",
+            backgroundPosition: "center",
             margin: "0 auto",
           }}
         >
@@ -67,6 +72,7 @@ function App() {
               process.env.PUBLIC_URL + "/assets/pozadina/pozadina4.jpg"
             })`,
             backgroundSize: "cover",
+            backgroundPosition: "center",
             margin: "0 auto",
           }}
         >

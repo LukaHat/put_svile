@@ -5,12 +5,8 @@ export const QuoteGen = () => {
   const [isPoloModalOpen, setIsPoloModalOpen] = useState(false);
   const [isKhanModalOpen, setIsKhanModalOpen] = useState(false);
 
-  const [poloFact, setPoloFact] = useState(
-    "Jeste li znali da se obitelj Marca Pola bavila trgovinom, a on je s njima krenuo na putovanje u Aziju sa 17 godina?"
-  );
-  const [khanFact, setKhanFact] = useState(
-    "Jeste li znali da je Kublai-Khan bio unuk Džingis-kana?"
-  );
+  const [poloFact, setPoloFact] = useState("");
+  const [khanFact, setKhanFact] = useState("");
 
   const quoteLink = "https://put-svile-backend.onrender.com/api/v1/quotes";
 
@@ -37,12 +33,16 @@ export const QuoteGen = () => {
 
   const handlePoloClick = () => {
     getPoloQuote();
-    setIsPoloModalOpen(true);
+    setTimeout(() => {
+      setIsPoloModalOpen(true);
+    }, 400);
   };
 
   const handleKhanClick = () => {
     getKhanQuote();
-    setIsKhanModalOpen(true);
+    setTimeout(() => {
+      setIsKhanModalOpen(true);
+    }, 400);
   };
 
   return (
