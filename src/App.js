@@ -5,6 +5,9 @@ import style from "./style/main.css";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { HrvatskaKulturnaPutovnica } from "./HrvatskaKulturnaPutovnica/HrvatskaKulturnaPutovnica";
 import KruznaKreativnost from "./KruznaKreativnost/KruznaKreativnost";
+import { PozivNaSuradnju } from "./PozivNaSuradnju/PozivNaSuradnju";
+import { Footer } from "./Footer/Footer";
+import { Ratings } from "./PozivNaSuradnju/Rating/Rating";
 
 function App() {
   return (
@@ -71,14 +74,16 @@ function App() {
           offset={4}
           style={{
             backgroundImage: `url(${
-              process.env.PUBLIC_URL + "/assets/pozadina/pozadina4.jpg"
+              process.env.PUBLIC_URL + "/assets/pozadina/pozadina9.svg"
             })`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             margin: "0 auto",
           }}
         >
-          <h1>Hello World5</h1>
+          <PozivNaSuradnju />
+          <Ratings />
+          <Footer />
         </ParallaxLayer>
       </Parallax>
     </div>
