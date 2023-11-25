@@ -4,6 +4,7 @@ import { QuoteGen } from "./QuoteGen/QuoteGen";
 import style from "./style/main.css";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { HrvatskaKulturnaPutovnica } from "./HrvatskaKulturnaPutovnica/HrvatskaKulturnaPutovnica";
+import KruznaKreativnost from "./KruznaKreativnost/KruznaKreativnost";
 
 function App() {
   return (
@@ -55,14 +56,15 @@ function App() {
           offset={3}
           style={{
             backgroundImage: `url(${
-              process.env.PUBLIC_URL + "/assets/pozadina/pozadina4.jpg"
+              process.env.PUBLIC_URL +
+              "/assets/pozadina/stacked-waves-haikei.svg"
             })`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             margin: "0 auto",
           }}
         >
-          <h1>Hello World4</h1>
+          <KruznaKreativnost />
         </ParallaxLayer>
 
         <ParallaxLayer
