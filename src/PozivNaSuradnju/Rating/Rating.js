@@ -18,7 +18,6 @@ export const Ratings = () => {
       .post("https://put-svile-backend.onrender.com/api/v1/reviews", postData)
       .then((response) => {
         console.log("Review submitted successfully:", response.data);
-        // You can add additional logic here based on the response if needed
       })
       .catch((error) => {
         console.error("Error submitting review:", error);
@@ -28,7 +27,7 @@ export const Ratings = () => {
 
   return (
     <div>
-      <form>
+      <form className="rating-form">
         <Typography component="legend" className="legenda">
           <h2>Koliko vam se svidjela ova stranica?</h2>
         </Typography>
@@ -42,14 +41,22 @@ export const Ratings = () => {
               setRating(newRating);
             }}
           />
-          <label htmlFor="komentar">Imaš li kakav komentar?</label>
-          <input
-            type="text"
-            id="komentar"
-            onChange={(e) => setComment(e.target.value)}
-          />
-          <input type="button" value="Pošalji" onClick={handleSubmit} />
+          <div className="comment-section">
+            <label htmlFor="komentar">Imaš li kakav komentar?</label>
+            <input
+              type="text"
+              id="komentar"
+              onChange={(e) => setComment(e.target.value)}
+            />
+          </div>
         </div>
+        <input
+          type="button"
+          value="Pošalji"
+          onClick={handleSubmit}
+          placeholder="Komentar unesite ovdje"
+          className="send-button"
+        />
       </form>
     </div>
   );
