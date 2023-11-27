@@ -1,6 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const PozivNaSuradnju = () => {
+  const [isFacebookHovered, setIsFacebookHovered] = useState(false);
+  const [isYoutubeHovered, setIsYoutubeHovered] = useState(false);
+  const [isInstagramHovered, setIsInstagramHovered] = useState(false);
+
+  const handleFacebookMouseEnter = () => {
+    setIsFacebookHovered(true);
+  };
+
+  const handleFacebookMouseLeave = () => {
+    setIsFacebookHovered(false);
+  };
+  const handleYoutubeMouseEnter = () => {
+    setIsYoutubeHovered(true);
+  };
+
+  const handleYoutubeMouseLeave = () => {
+    setIsYoutubeHovered(false);
+  };
+  const handleInstagramMouseEnter = () => {
+    setIsInstagramHovered(true);
+  };
+
+  const handleInstagramMouseLeave = () => {
+    setIsInstagramHovered(false);
+  };
+
   return (
     <>
       <div className="poziv-na-suradnju-box">
@@ -19,8 +45,16 @@ export const PozivNaSuradnju = () => {
                 rel="noreferrer"
               >
                 <img
-                  src={process.env.PUBLIC_URL + "/assets/social/facebook.png"}
+                  src={
+                    isFacebookHovered
+                      ? process.env.PUBLIC_URL +
+                        "/assets/social/facebook-reverse.webp"
+                      : process.env.PUBLIC_URL + "/assets/social/facebook.png"
+                  }
                   alt="facebook link"
+                  className="facebook-link"
+                  onMouseEnter={handleFacebookMouseEnter}
+                  onMouseLeave={handleFacebookMouseLeave}
                 />
               </a>
             </li>
@@ -32,8 +66,16 @@ export const PozivNaSuradnju = () => {
                 rel="noreferrer"
               >
                 <img
-                  src={process.env.PUBLIC_URL + "/assets/social/youtube.png"}
+                  src={
+                    isYoutubeHovered
+                      ? process.env.PUBLIC_URL +
+                        "/assets/social/youtube-reverse.png"
+                      : process.env.PUBLIC_URL + "/assets/social/yt2.png"
+                  }
                   alt="youtube link"
+                  className="youtube-link"
+                  onMouseEnter={handleYoutubeMouseEnter}
+                  onMouseLeave={handleYoutubeMouseLeave}
                 />
               </a>
             </li>
@@ -45,8 +87,16 @@ export const PozivNaSuradnju = () => {
                 rel="noreferrer"
               >
                 <img
-                  src={process.env.PUBLIC_URL + "/assets/social/instagram.png"}
+                  src={
+                    isInstagramHovered
+                      ? process.env.PUBLIC_URL +
+                        "/assets/social/instagram-reverse.png"
+                      : process.env.PUBLIC_URL + "/assets/social/instagram.png"
+                  }
                   alt="instagram link"
+                  className="instagram-link"
+                  onMouseEnter={handleInstagramMouseEnter}
+                  onMouseLeave={handleInstagramMouseLeave}
                 />
               </a>
             </li>

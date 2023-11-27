@@ -248,6 +248,19 @@ header .main-nav .nav-link:hover {
   height: 10vh;
   width: auto;
   border-radius: 50%;
+  transition: 500ms;
+}
+.poziv-na-suradnju-box .info-socials .socials-items .facebook-link:hover {
+  scale: 1.5;
+  box-shadow: 5px 5px 20px #0084ff;
+}
+.poziv-na-suradnju-box .info-socials .socials-items .youtube-link:hover {
+  scale: 1.5;
+  box-shadow: 5px 5px 20px #FF0000;
+}
+.poziv-na-suradnju-box .info-socials .socials-items .instagram-link:hover {
+  scale: 1.5;
+  box-shadow: 5px 5px 20px #C13584;
 }
 
 .ocjena {
