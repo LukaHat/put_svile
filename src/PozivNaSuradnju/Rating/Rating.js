@@ -17,6 +17,8 @@ export const Ratings = () => {
     };
 
     // Make a POST request using Axios
+    if (!postData.rating || !postData.comment)
+      return console.log("Cannot submit empty review.");
     axios
       .post("https://put-svile-backend.onrender.com/api/v1/reviews", postData)
       .then((response) => {
@@ -45,11 +47,12 @@ export const Ratings = () => {
             }}
           />
           <div className="comment-section">
-            <label htmlFor="komentar">{t("Any comments?")}</label>
+            <label htmlFor="komentar">{t("rating-comment-title")}</label>
             <input
               type="text"
               id="komentar"
               onChange={(e) => setComment(e.target.value)}
+              placeholder={t("comment-placeholder")}
             />
           </div>
         </div>

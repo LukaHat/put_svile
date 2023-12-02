@@ -16,11 +16,12 @@ function App() {
         <ParallaxLayer
           style={{
             backgroundImage: `url(${
-              process.env.PUBLIC_URL + "/assets/pozadina/pozadina4.jpg"
+              process.env.PUBLIC_URL + "/assets/pozadina/pos1.jpg"
             })`,
             backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            margin: "0 auto",
+            borderBottom: "2px solid black",
           }}
         >
           <Header />
@@ -31,11 +32,12 @@ function App() {
           offset={1}
           style={{
             backgroundImage: `url(${
-              process.env.PUBLIC_URL + "/assets/pozadina/pozadina7.webp"
+              process.env.PUBLIC_URL + "/assets/pozadina/pos4.png"
             })`,
             backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            margin: "0 auto",
+            borderBottom: "2px solid black",
           }}
         >
           <QuoteGen />
@@ -48,8 +50,9 @@ function App() {
               process.env.PUBLIC_URL + "/assets/pozadina/pozadina3.svg"
             })`,
             backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            margin: "0 auto",
+            borderBottom: "2px solid black",
           }}
         >
           <HrvatskaKulturnaPutovnica />
@@ -59,12 +62,12 @@ function App() {
           offset={3}
           style={{
             backgroundImage: `url(${
-              process.env.PUBLIC_URL +
-              "/assets/pozadina/stacked-waves-haikei.svg"
+              process.env.PUBLIC_URL + "/assets/pozadina/pos2.png"
             })`,
             backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            margin: "0 auto",
+            borderBottom: "2px solid black",
           }}
         >
           <KruznaKreativnost />
@@ -74,11 +77,11 @@ function App() {
           offset={4}
           style={{
             backgroundImage: `url(${
-              process.env.PUBLIC_URL + "/assets/pozadina/pozadina9.svg"
+              process.env.PUBLIC_URL + "/assets/pozadina/pos7.png"
             })`,
             backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            margin: "0 auto",
           }}
         >
           <PozivNaSuradnju />

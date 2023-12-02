@@ -1,55 +1,69 @@
 header {
-  background-color: white;
-  border-bottom: 2px solid #4169e1;
-  height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background: linear-gradient(to right bottom, rgb(10, 10, 10), #dfc7df);
   width: 100%;
-  position: absolute;
+  opacity: 1;
 }
 header .header-links {
   display: flex;
-  justify-content: space-between;
-  margin: 0 15% 0 10%;
-  height: 4.5vh;
-  margin-top: 0.5vh;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 header .header-links .main-logo {
-  height: 4vh;
+  margin: 20px;
+  height: 7vh;
 }
 header .header-links .header-social-links {
   display: flex;
-  justify-content: space-around;
-  gap: 15%;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 10px;
 }
 header .header-links .header-social-links .header-social-link {
-  height: 2vh;
-  width: auto;
+  margin: 10px;
+  height: 5vh;
+  transition: all 0.5s;
+}
+header .header-links .header-social-links .header-social-link:hover {
+  transform: scale(0.8);
+}
+header .header-links .header-social-links .language-picker #language-select {
+  background-color: #e419e4;
+  margin: 10px;
+  padding: 10px;
+  color: white;
 }
 header .main-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 0 10%;
-  width: 80%;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
   font-weight: bold;
-  height: 50%;
-  height: 5vh;
 }
 header .main-nav #active {
-  background-color: #4169e1;
+  background-color: #e419e4;
   color: white;
 }
 header .main-nav .nav-link {
-  background-color: white;
-  color: #4169e1;
+  background-color: #fff;
+  color: #e419e4;
   flex-grow: 100;
-  padding: 10px 0;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 header .main-nav .nav-link:hover {
-  background-color: #4169e1;
+  background-color: #e419e4;
   color: white;
   transition: 0.5s;
 }/*# sourceMappingURL=header.css.map */

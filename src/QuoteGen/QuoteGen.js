@@ -8,15 +8,12 @@ export const QuoteGen = () => {
   const [poloFact, setPoloFact] = useState("");
   const [khanFact, setKhanFact] = useState("");
 
-  const quoteLink = "https://put-svile-backend.onrender.com/api/v1/quotes";
-
-  const randNumber = () => Math.floor(Math.random() * 30);
-  const index = randNumber();
-
+  const quoteLink =
+    "https://put-svile-backend.onrender.com/api/v1/quotes/single-quote";
   const getPoloQuote = async () => {
     try {
-      const response = await axios.get(`${quoteLink}?isAbout=marco-polo`);
-      setPoloFact(response.data.facts[index].fact);
+      const response = await axios.get(`${quoteLink}/marco-polo`);
+      setPoloFact(response.data.translated[2]);
     } catch (error) {
       console.log("Error fetching data:", error);
     }
@@ -24,13 +21,12 @@ export const QuoteGen = () => {
 
   const getKhanQuote = async () => {
     try {
-      const response = await axios.get(`${quoteLink}?isAbout=kublai-khan`);
-      setKhanFact(response.data.facts[index].fact);
+      const response = await axios.get(`${quoteLink}/kublai-khan`);
+      setKhanFact(response.data.translated[2]);
     } catch (error) {
       console.log("Error fetching data:", error);
     }
   };
-
   const handlePoloClick = () => {
     getPoloQuote();
     setTimeout(() => {
@@ -50,13 +46,13 @@ export const QuoteGen = () => {
       <section className="quote-boxes">
         <img
           className="quote-img"
-          src={`${process.env.PUBLIC_URL + "/assets/krimg/marko.jpg"}`}
+          src={`${process.env.PUBLIC_URL + "/assets/krimg/polo.png"}`}
           alt="Marko Polo"
           onClick={handlePoloClick}
         ></img>
         <img
           className="quote-img"
-          src={`${process.env.PUBLIC_URL + "/assets/krimg/kubla.jpg"}`}
+          src={`${process.env.PUBLIC_URL + "/assets/krimg/kan.png"}`}
           alt="Kublaj Khan"
           onClick={handleKhanClick}
         ></img>

@@ -32,7 +32,7 @@ export const PozivNaSuradnju = () => {
 
   return (
     <>
-      <div className="poziv-na-suradnju-box">
+      <div className="poziv-na-suradnju-box" id="poziv-na-suradnju-box">
         <div className="info-socials">
           <div className="info-items">
             <h3>{t("address")}</h3>

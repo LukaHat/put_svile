@@ -1,81 +1,96 @@
 .poziv-na-suradnju-box
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  flex-direction: column
+  margin: 20px
+
+  .info-socials
     display: flex
-    justify-content: center
-    align-items: center
-    width: 100vw
-    .info-socials
-        width: 100vw
-        text-align: center
-        .info-items
-            display: flex
-            justify-content: center
-            align-items: center
-            flex-direction: column
-            height: 20vh
-        .socials-items
-            display: flex
-            flex-direction: row
-            justify-content: center
-            list-style-type: none
-            gap: 5%
-            img
-                height: 10vh
-                width: auto
-                border-radius: 50%
-                transition: 500ms
-            .facebook-link
-                &:hover
-                    scale: 1.5
-                    box-shadow: 5px 5px 20px #0084ff
-            .youtube-link
-                &:hover
-                    scale: 1.5
-                    box-shadow: 5px 5px 20px #FF0000
-            .instagram-link
-                &:hover
-                    scale: 1.5
-                    box-shadow: 5px 5px 20px #C13584
+    flex-wrap: wrap
+    flex-direction: column
+    text-align: center
+    color: #fff
+
+    .info-items
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      color: #fff
+
+    .socials-items
+      display: flex
+      flex-direction: row
+      justify-content: center
+      list-style-type: none
+      gap: 5%
+      color: #fff
+      transition: all .5s
+
+      img
+        height: 10vh
+        width: auto
+        border-radius: 50%
+        transition: 500ms
+
+      .facebook-link:hover
+        transform: scale(1.2)
+        box-shadow: 5px 5px 20px #0084ff
+
+      .youtube-link:hover
+        transform: scale(1.2)
+        box-shadow: 5px 5px 20px #FF0000
+
+      .instagram-link:hover
+        transform: scale(1.2)
+        box-shadow: 5px 5px 20px #C13584
+
 .ocjena
-    display: flex
-    justify-content: center
-    align-items: center
-    margin: 5% 10%
-    gap: 5vw
-    svg
-        scale: 2
-        &:hover
-            box-shadow: 5px 5px 10px yellow
-        
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #fff
+
+  svg
+    transform: scale(1.5)
+    color: yellow
+    margin: 10px
 
 .rating-form
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  color: #fff
+
+  .comment-section
     display: flex
-    flex-direction: column
-    justify-content: center
     align-items: center
-    .comment-section
-        display: flex
-        align-items: center
-        justify-content: center
-        flex-direction: column
-        #komentar
-            width: 20vw
-            height: 10vh
-            margin-bottom: 10%
-    .legenda
-        text-align: center
-        padding-top: 10vh
-    .send-button
-        height: 5vh
-        width: 8vh
-        border-radius: 1em
-        color: #297EA6
-        background-color: white
-        border: 2px solid #297EA6
-        transition: 500ms
-        &:hover
-            scale: 1.2
-            box-shadow: 5px 5px 10px #297EA6
-            background-color: #297EA6
-            border: 2px solid white
-            color: white
-            cursor: pointer
+    justify-content: center
+    flex-direction: column
+
+  .legenda
+    text-align: center
+    font-weight: bolder
+
+#komentar
+  padding: 10px
+  text-align: center
+  border: none
+  background-color: inherit
+
+.rating-form .send-button
+  margin-top: 2px
+  padding: 2px
+  color: #fffafa
+  background-color: inherit
+  transition: 500ms
+  font-weight: 400
+  font-size: 1rem
+  border: none
+
+  &:hover
+    transform: scale(0.9)
+    cursor: pointer

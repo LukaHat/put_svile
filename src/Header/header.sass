@@ -1,50 +1,68 @@
-@import '../style/mixins'
-@import '../style/variables'
-
 header
-    background-color: white
-    border-bottom: 2px solid $main-color
-    height: 10vh
-    width: 100%
-    position: absolute
-    .header-links
-        display: flex
-        justify-content: space-between
-        margin: 0 15% 0 10%
-        height: 4.5vh
-        margin-top: 0.5vh 
-        .main-logo
-            height: 4vh
-        .header-social-links
-            display: flex
-            justify-content: space-around
-            gap: 15%
-            .header-social-link
-                height: 2vh
-                width: auto
-    .main-nav
-        display: flex
-        align-items: center
-        justify-content: space-between
-        margin: 0 10%
-        width: 80%
-        font-weight: bold
-        height: 50%
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+  flex-direction: row
+  background: linear-gradient(to right bottom, rgb(10, 10, 10), #dfc7df)
+  width: 100%
+  opacity: 1
+
+  .header-links
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-wrap: wrap
+    flex-direction: row
+
+    .main-logo
+      margin: 20px
+      height: 7vh
+
+    .header-social-links
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+      flex-direction: row
+      margin: 10px
+
+      .header-social-link
+        margin: 10px
         height: 5vh
-        #active
-            background-color: $main-color
-            color: white
-        .nav-link
-            background-color: white
-            color: $main-color
-            flex-grow: 100
-            padding: 10px 0
-            height: 100%
-            display: flex
-            align-items: center
-            justify-content: center
-            &:hover
-                background-color: $main-color
-                color: white
-                transition: 0.5s
-                
+        transition: all .5s
+        &:hover
+          transform: scale(0.8)
+      .language-picker #language-select
+        background-color: #e419e4
+        margin: 10px
+        padding: 10px
+        color: white
+        
+
+  .main-nav
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    width: 100%
+    flex-wrap: wrap
+    flex-direction: row
+    font-weight: bold
+
+    #active
+      background-color: #e419e4
+      color: white
+
+    .nav-link
+      background-color: #fff
+      color: #e419e4
+      flex-grow: 100
+      display: flex
+      align-items: center
+      justify-content: center
+      &:hover
+        background-color: #e419e4
+        color: white
+        transition: 0.5s
+
+    
