@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export const Header = () => {
+  const { t } = useTranslation();
+
   return (
     <header>
       <div className="header-links">
@@ -39,16 +42,16 @@ export const Header = () => {
       </div>
       <nav className="main-nav">
         <a href="#" className="nav-link" id="active">
-          Početna
+          {t("home")}
         </a>
         <a href="#" className="nav-link">
-          Hrvatska kulturna putovnica
+          {t("cultural-passport")}
         </a>
         <a href="#" className="nav-link">
-          Kružna kreativnost
+          {t("creativity")}
         </a>
         <a href="#" className="nav-link">
-          Kontakt
+          {t("contact")}
         </a>
       </nav>
     </header>

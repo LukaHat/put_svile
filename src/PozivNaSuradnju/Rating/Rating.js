@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Typography, Rating } from "@mui/material";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 export const Ratings = () => {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
+
+  const { t } = useTranslation();
 
   const handleSubmit = () => {
     // Prepare data to be sent in the POST request
@@ -29,7 +32,7 @@ export const Ratings = () => {
     <div>
       <form className="rating-form">
         <Typography component="legend" className="legenda">
-          <h2>Koliko vam se svidjela ova stranica?</h2>
+          <h2>{t("rating-title")}</h2>
         </Typography>
         <div className="">
           <Rating
@@ -42,7 +45,7 @@ export const Ratings = () => {
             }}
           />
           <div className="comment-section">
-            <label htmlFor="komentar">Imaš li kakav komentar?</label>
+            <label htmlFor="komentar">{t("Any comments?")}</label>
             <input
               type="text"
               id="komentar"
@@ -52,7 +55,7 @@ export const Ratings = () => {
         </div>
         <input
           type="button"
-          value="Pošalji"
+          value={t("send")}
           onClick={handleSubmit}
           placeholder="Komentar unesite ovdje"
           className="send-button"

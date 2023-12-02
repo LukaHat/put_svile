@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export const PozivNaSuradnju = () => {
+  const { t } = useTranslation();
+
   const [isFacebookHovered, setIsFacebookHovered] = useState(false);
   const [isYoutubeHovered, setIsYoutubeHovered] = useState(false);
   const [isInstagramHovered, setIsInstagramHovered] = useState(false);
@@ -32,9 +35,9 @@ export const PozivNaSuradnju = () => {
       <div className="poziv-na-suradnju-box">
         <div className="info-socials">
           <div className="info-items">
-            <h3>Adresa</h3>
+            <h3>{t("address")}</h3>
             <p>Trg Ljudevita Gaja 7, 31000, Osijek</p>
-            <h3>Pronađite događaj i na društvenim mrežama</h3>
+            <h3>{t("call-to-social-media")}</h3>
           </div>
           <ul className="socials-items">
             <li className="socials-item">

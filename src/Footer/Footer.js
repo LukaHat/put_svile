@@ -1,13 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer>
-      <p>
-        Stranica je nastala kao idejno rješenje za temu ovogodišnjeg milenijskog
-        natjecanja Kreativne Riznice - Put Svile
-      </p>
-      <p>Sva prava zadržava PI2023</p>
+      <p>{t("footer-description")}</p>
+      <p>{t("rights-reserved")}</p>
     </footer>
   );
 };
