@@ -202,8 +202,8 @@ header .main-nav .nav-link:hover {
   background: linear-gradient(to right bottom, rgba(228, 30, 30, 0.9254901961), rgba(233, 217, 233, 0.9607843137), rgba(21, 18, 219, 0.87));
   transition: all 1s;
   color: #fff;
-  border-radius: 0 0 20% 20%;
-  padding: 20px;
+  border-radius: 0 0 10% 10%;
+  padding: 2% 0;
   scroll-behavior: smooth;
 }
 
@@ -213,15 +213,15 @@ header .main-nav .nav-link:hover {
 .accordion .accordion-title {
   text-align: center;
   font-weight: bold;
-  font-size: 3em;
 }
 
 .accordion-button {
   color: white;
   background: none;
   border: none;
-  font-size: 1.4em;
+  font-size: 1em;
   margin: auto 2.5%;
+  text-align: left;
 }
 .accordion-button:visited {
   border: none;
@@ -232,7 +232,9 @@ header .main-nav .nav-link:hover {
 }
 
 .accordion-body {
-  margin: 0 2.5%;
+  margin: 0 5%;
+  max-height: 50vh;
+  overflow-y: scroll;
 }
 
 .kruzna-kreativnost-box {
@@ -255,13 +257,12 @@ header .main-nav .nav-link:hover {
   border-radius: 10vh;
 }
 .kruzna-kreativnost-box .slider-box .slider-text {
-  width: 50%;
-  height: 10vh;
-  margin-bottom: 10%;
+  width: 80%;
+  max-height: 50%;
 }
 .kruzna-kreativnost-box .slider-box .slider {
   width: 50%;
-  height: 30%;
+  max-height: 50%;
 }
 .kruzna-kreativnost-box .slider-box .slider .slick-arrow {
   scale: 3;
@@ -275,14 +276,30 @@ header .main-nav .nav-link:hover {
   height: 20vh;
   width: 10vw;
 }
+@media screen and (max-width: 777px), (max-height: 777px) {
+  .kruzna-kreativnost-box .slider-box .slider-text {
+    overflow-y: scroll;
+  }
+  .kruzna-kreativnost-box .slider-box .slider .slick-arrow {
+    scale: 2;
+  }
+  .kruzna-kreativnost-box .slider-box .slider .slick-slide div {
+    display: grid;
+    place-items: center;
+  }
+  .kruzna-kreativnost-box .slider-box .slider .slick-slide div .slider-img {
+    height: 15vh;
+    width: 15vh;
+  }
+}
 
 .poziv-na-suradnju-box {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 20px;
 }
 .poziv-na-suradnju-box .info-socials {
   display: flex;
@@ -290,6 +307,9 @@ header .main-nav .nav-link:hover {
   flex-direction: column;
   text-align: center;
   color: #fff;
+}
+.poziv-na-suradnju-box .info-socials h3 {
+  font-size: 1.5em;
 }
 .poziv-na-suradnju-box .info-socials .info-items {
   display: flex;
@@ -335,7 +355,7 @@ header .main-nav .nav-link:hover {
 .ocjena svg {
   transform: scale(1.5);
   color: yellow;
-  margin: 10px;
+  margin: 0.5em;
 }
 
 .rating-form {
@@ -355,17 +375,17 @@ header .main-nav .nav-link:hover {
   text-align: center;
   font-weight: bolder;
 }
+.rating-form .legenda h2 {
+  font-size: 1.5em;
+}
 
 #komentar {
-  padding: 10px;
   text-align: center;
   border: none;
   background-color: inherit;
 }
 
 .rating-form .send-button {
-  margin-top: 2px;
-  padding: 2px;
   color: #fffafa;
   background-color: inherit;
   transition: 500ms;
@@ -378,6 +398,66 @@ header .main-nav .nav-link:hover {
   cursor: pointer;
 }
 
+.submitted {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  animation: 1s ease drop;
+}
+.submitted img {
+  cursor: pointer;
+  height: 40vh;
+  width: auto;
+}
+
+@media screen and (min-width: 530px) {
+  .submitted img {
+    height: 50vh;
+    width: auto;
+  }
+}
+.cookie-modal {
+  position: fixed;
+  background: linear-gradient(to right bottom, rgba(10, 10, 10, 0.863), rgba(223, 199, 223, 0.842));
+  margin: 20px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s;
+  animation: fadeIn 0.5s ease-in;
+}
+.cookie-modal .close-button {
+  position: absolute;
+  top: 0;
+  right: 3%;
+  cursor: pointer;
+  color: white;
+  font-size: 2em;
+  height: 10vh;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cookie-modal-closed {
+  display: none;
+}
+.cookie-modal-closed .close-button {
+  display: none;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 footer {
   position: fixed;
   bottom: 0;
@@ -391,8 +471,7 @@ footer {
   color: #fff;
   font-weight: 400;
   font-size: 1em;
-  padding: 2px;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 * {

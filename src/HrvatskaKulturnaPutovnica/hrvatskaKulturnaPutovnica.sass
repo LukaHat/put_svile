@@ -5,8 +5,8 @@
   background: linear-gradient(to right bottom, #e41e1eec, #e9d9e9f5, rgba(21, 18, 219, 0.87))
   transition: all 1s
   color: #fff
-  border-radius: 0 0 20% 20%
-  padding: 20px
+  border-radius: 0 0 10% 10%
+  padding: 2% 0
   scroll-behavior: smooth
 
 .accordion
@@ -15,14 +15,14 @@
   .accordion-title
     text-align: center
     font-weight: bold
-    font-size: 3em
 
 .accordion-button
   color: white
   background: none
   border: none
-  font-size: 1.4em
+  font-size: 1em
   margin: auto 2.5%
+  text-align: left
 
   &:visited
     border: none
@@ -31,4 +31,6 @@
   border-bottom: 1px solid white
 
 .accordion-body
-  margin: 0 2.5%
+  margin: 0 5%
+  max-height: 50vh
+  overflow-y: scroll

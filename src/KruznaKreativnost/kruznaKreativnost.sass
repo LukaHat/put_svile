@@ -15,12 +15,11 @@
         background-color: rgba(154, 194, 197, 0.7)
         border-radius: 10vh
         .slider-text
-            width: 50%
-            height: 10vh
-            margin-bottom: 10%
+            width: 80%
+            max-height: 50%
         .slider
             width: 50%
-            height: 30%
+            max-height: 50%
             .slick-arrow
                 scale:3
             .image-holder
@@ -30,3 +29,18 @@
                 .slider-img
                     height: 20vh
                     width: 10vw
+
+        @media screen and (max-width: 777px), (max-height: 777px)
+            .slider-text
+                overflow-y: scroll
+            .slider
+                .slick-arrow
+                    scale: 2 
+                .slick-slide
+                    div
+                        display: grid
+                        place-items: center
+                        .slider-img
+                            height: 15vh
+                            width: 15vh
+

@@ -5,8 +5,8 @@
   background: linear-gradient(to right bottom, rgba(228, 30, 30, 0.9254901961), rgba(233, 217, 233, 0.9607843137), rgba(21, 18, 219, 0.87));
   transition: all 1s;
   color: #fff;
-  border-radius: 0 0 20% 20%;
-  padding: 20px;
+  border-radius: 0 0 10% 10%;
+  padding: 2% 0;
   scroll-behavior: smooth;
 }
 
@@ -16,15 +16,15 @@
 .accordion .accordion-title {
   text-align: center;
   font-weight: bold;
-  font-size: 3em;
 }
 
 .accordion-button {
   color: white;
   background: none;
   border: none;
-  font-size: 1.4em;
+  font-size: 1em;
   margin: auto 2.5%;
+  text-align: left;
 }
 .accordion-button:visited {
   border: none;
@@ -35,5 +35,7 @@
 }
 
 .accordion-body {
-  margin: 0 2.5%;
+  margin: 0 5%;
+  max-height: 50vh;
+  overflow-y: scroll;
 }/*# sourceMappingURL=hrvatskaKulturnaPutovnica.css.map */

@@ -18,13 +18,12 @@
   border-radius: 10vh;
 }
 .kruzna-kreativnost-box .slider-box .slider-text {
-  width: 50%;
-  height: 10vh;
-  margin-bottom: 10%;
+  width: 80%;
+  max-height: 50%;
 }
 .kruzna-kreativnost-box .slider-box .slider {
   width: 50%;
-  height: 30%;
+  max-height: 50%;
 }
 .kruzna-kreativnost-box .slider-box .slider .slick-arrow {
   scale: 3;
@@ -37,4 +36,20 @@
 .kruzna-kreativnost-box .slider-box .slider .image-holder .slider-img {
   height: 20vh;
   width: 10vw;
+}
+@media screen and (max-width: 777px), (max-height: 777px) {
+  .kruzna-kreativnost-box .slider-box .slider-text {
+    overflow-y: scroll;
+  }
+  .kruzna-kreativnost-box .slider-box .slider .slick-arrow {
+    scale: 2;
+  }
+  .kruzna-kreativnost-box .slider-box .slider .slick-slide div {
+    display: grid;
+    place-items: center;
+  }
+  .kruzna-kreativnost-box .slider-box .slider .slick-slide div .slider-img {
+    height: 15vh;
+    width: 15vh;
+  }
 }/*# sourceMappingURL=kruznaKreativnost.css.map */

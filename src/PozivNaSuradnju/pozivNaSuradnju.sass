@@ -1,10 +1,10 @@
 .poziv-na-suradnju-box
+  position: relative
   display: flex
   justify-content: center
   align-items: center
   flex-wrap: wrap
   flex-direction: column
-  margin: 20px
 
   .info-socials
     display: flex
@@ -12,6 +12,8 @@
     flex-direction: column
     text-align: center
     color: #fff
+    h3
+      font-size: 1.5em
 
     .info-items
       display: flex
@@ -56,8 +58,7 @@
   svg
     transform: scale(1.5)
     color: yellow
-    margin: 10px
-
+    margin: 0.5em
 .rating-form
   display: flex
   flex-direction: column
@@ -74,16 +75,15 @@
   .legenda
     text-align: center
     font-weight: bolder
+    h2
+      font-size: 1.5em
 
 #komentar
-  padding: 10px
   text-align: center
   border: none
   background-color: inherit
 
 .rating-form .send-button
-  margin-top: 2px
-  padding: 2px
   color: #fffafa
   background-color: inherit
   transition: 500ms
@@ -94,3 +94,56 @@
   &:hover
     transform: scale(0.9)
     cursor: pointer
+
+
+.submitted
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  color: white
+  animation: 1s ease drop
+  img
+    cursor: pointer
+    height: 40vh
+    width: auto
+
+@media screen and (min-width: 530px)
+  .submitted
+    img
+      height: 50vh
+      width: auto
+
+.cookie-modal
+  position: fixed
+  background: linear-gradient(to right bottom, rgba(10, 10, 10, 0.863), rgba(223, 199, 223, 0.842))
+  margin: 20px
+  padding: 20px
+  color: white
+  display: flex
+  justify-content: center
+  align-items: center
+  transition: all 2s
+  animation: fadeIn .5s ease-in
+  .close-button
+    position: absolute
+    top: 0
+    right: 3%
+    cursor: pointer
+    color: white
+    font-size: 2em
+    height: 10vh
+    background: none
+    border: none
+    cursor: pointer
+.cookie-modal-closed
+  display: none
+  .close-button
+    display: none
+
+
+@keyframes drop
+  0%
+    transform: translateY(-100%)
+  100%
+    transform: translateY(0)
