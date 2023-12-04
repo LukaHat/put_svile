@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import { Header } from "./Header/Header";
 import { Vilijun } from "./Vilijun/Vilijun";
 import { QuoteGen } from "./QuoteGen/QuoteGen";
@@ -9,7 +10,14 @@ import { PozivNaSuradnju } from "./PozivNaSuradnju/PozivNaSuradnju";
 import { Footer } from "./Footer/Footer";
 import { Ratings } from "./PozivNaSuradnju/Rating/Rating";
 
-function App() {
+function App(props) {
+  const [language, setLanguage] = useState(props.language);
+
+  useEffect(() => {
+    // Update language state when props.language changes
+    setLanguage(props.language);
+  }, [props.language]);
+
   return (
     <div>
       <Parallax pages={5}>
@@ -21,7 +29,7 @@ function App() {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            borderBottom: "2px solid black",
+            borderBottom: "2px solid white",
           }}
         >
           <Header />
@@ -37,10 +45,10 @@ function App() {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            borderBottom: "2px solid black",
+            borderBottom: "2px solid white",
           }}
         >
-          <QuoteGen />
+          <QuoteGen language={language} />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -52,7 +60,7 @@ function App() {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            borderBottom: "2px solid black",
+            borderBottom: "2px solid white",
           }}
         >
           <HrvatskaKulturnaPutovnica />
@@ -67,7 +75,7 @@ function App() {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            borderBottom: "2px solid black",
+            borderBottom: "2px solid white",
           }}
         >
           <KruznaKreativnost />
@@ -85,7 +93,7 @@ function App() {
           }}
         >
           <PozivNaSuradnju />
-          <Ratings />
+          <Ratings language={props.language} />
           <Footer />
         </ParallaxLayer>
       </Parallax>

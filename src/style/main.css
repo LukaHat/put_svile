@@ -51,10 +51,6 @@ header .main-nav {
   flex-direction: row;
   font-weight: bold;
 }
-header .main-nav #active {
-  background-color: #e419e4;
-  color: white;
-}
 header .main-nav .nav-link {
   background-color: #fff;
   color: #e419e4;
@@ -62,6 +58,7 @@ header .main-nav .nav-link {
   display: flex;
   align-items: center;
   justify-content: center;
+  scroll-behavior: smooth;
 }
 header .main-nav .nav-link:hover {
   background-color: #e419e4;
@@ -125,11 +122,12 @@ header .main-nav .nav-link:hover {
 }
 .quote-boxes .quote-img {
   margin-top: 15%;
-  border-radius: 25%;
-  height: 30vh;
+  border-radius: 5%;
+  height: 35vh;
   transition: all 0.5s;
   opacity: 1;
   animation: glow infinite ease-in-out 2s;
+  cursor: pointer;
 }
 .quote-boxes .quote-img:hover {
   opacity: 0.9;
@@ -187,9 +185,11 @@ header .main-nav .nav-link:hover {
   }
   20% {
     box-shadow: 0px 0px 30px #edf1f1;
+    background-color: rgba(237, 241, 241, 0.662745098);
   }
   70% {
     box-shadow: 0px 0px 30px #dfc7df;
+    background-color: rgba(237, 241, 241, 0.6274509804);
   }
   100% {
     box-shadow: 0px 0px 30px #313131;
@@ -234,9 +234,13 @@ header .main-nav .nav-link:hover {
 .accordion-body {
   margin: 0 5%;
   max-height: 50vh;
-  overflow-y: scroll;
 }
 
+@media screen and (max-width: 770px) {
+  .accordion-body {
+    overflow-y: scroll;
+  }
+}
 .kruzna-kreativnost-box {
   margin: 5% 10%;
 }
@@ -244,6 +248,7 @@ header .main-nav .nav-link:hover {
   font-size: 3em;
   text-align: center;
   font-weight: bold;
+  color: white;
 }
 .kruzna-kreativnost-box .slider-box {
   display: flex;
@@ -253,8 +258,7 @@ header .main-nav .nav-link:hover {
   gap: 10%;
   height: 70vh;
   width: 100%;
-  background-color: rgba(154, 194, 197, 0.7);
-  border-radius: 10vh;
+  background-color: rgba(154, 194, 197, 0.9);
 }
 .kruzna-kreativnost-box .slider-box .slider-text {
   width: 80%;
@@ -383,6 +387,7 @@ header .main-nav .nav-link:hover {
   text-align: center;
   border: none;
   background-color: inherit;
+  color: white;
 }
 
 .rating-form .send-button {
@@ -408,19 +413,19 @@ header .main-nav .nav-link:hover {
 }
 .submitted img {
   cursor: pointer;
-  height: 40vh;
+  height: 25vh;
   width: auto;
 }
 
 @media screen and (min-width: 530px) {
   .submitted img {
-    height: 50vh;
+    height: 25vh;
     width: auto;
   }
 }
 .cookie-modal {
   position: fixed;
-  background: linear-gradient(to right bottom, rgba(10, 10, 10, 0.863), rgba(223, 199, 223, 0.842));
+  background: linear-gradient(to right bottom, rgba(10, 10, 10, 0.963), rgba(223, 199, 223, 0.942));
   margin: 20px;
   padding: 20px;
   color: white;
@@ -478,6 +483,7 @@ footer {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 * a {
   text-decoration: none;

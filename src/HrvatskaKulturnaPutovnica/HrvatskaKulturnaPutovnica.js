@@ -5,7 +5,7 @@ export const HrvatskaKulturnaPutovnica = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="accordion-menu" id="accordion-menu">
+    <div className="accordion-menu" id="accordion-menu" name="accordion-menu">
       <Accordion defaultActiveKey="0">
         <h2 className="accordion-title">{t("cultural-passport")}</h2>
         <Accordion.Item eventKey="0">

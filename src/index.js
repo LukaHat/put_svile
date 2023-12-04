@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import LanguageDetector from "i18next-browser-languagedetector";
@@ -24,11 +24,31 @@ i18next
     },
   });
 
+const RootApp = () => {
+  const [language, setLanguage] = useState(i18next.language);
+
+  useEffect(() => {
+    const changeLanguage = () => {
+      setLanguage(i18next.language);
+    };
+
+    // Listen for language changes
+    i18next.on("languageChanged", changeLanguage);
+
+    // Clean up the listener when the component unmounts
+    return () => {
+      i18next.off("languageChanged", changeLanguage);
+    };
+  }, []);
+
+  return (
+    <React.StrictMode>
+      <I18nextProvider i18n={i18next}>
+        <App language={language} />
+      </I18nextProvider>
+    </React.StrictMode>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <I18nextProvider i18n={i18next}>
-      <App />
-    </I18nextProvider>
-  </React.StrictMode>
-);
+root.render(<RootApp />);

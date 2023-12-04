@@ -50,10 +50,6 @@ header .main-nav {
   flex-direction: row;
   font-weight: bold;
 }
-header .main-nav #active {
-  background-color: #e419e4;
-  color: white;
-}
 header .main-nav .nav-link {
   background-color: #fff;
   color: #e419e4;
@@ -61,6 +57,7 @@ header .main-nav .nav-link {
   display: flex;
   align-items: center;
   justify-content: center;
+  scroll-behavior: smooth;
 }
 header .main-nav .nav-link:hover {
   background-color: #e419e4;

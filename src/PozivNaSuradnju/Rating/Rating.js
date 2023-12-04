@@ -3,7 +3,7 @@ import { Typography, Rating } from "@mui/material";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 
-export const Ratings = () => {
+export const Ratings = (props) => {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(
@@ -11,6 +11,7 @@ export const Ratings = () => {
   );
   const [citation, setCitation] = useState("");
   const [isCookieModalOpen, setIsCookieModalOpen] = useState(false);
+  const [language, setLanguage] = useState(2);
 
   const citationLink =
     "https://put-svile-backend.onrender.com/api/v1/fortunes/citation";
@@ -23,10 +24,25 @@ export const Ratings = () => {
     }
   }, [isSubmitted]);
 
+  useEffect(() => {
+    switch (props.language) {
+      case "en":
+        setLanguage(0);
+        break;
+      case "chi":
+        setLanguage(1);
+        break;
+      case "cro":
+      default:
+        setLanguage(2);
+        break;
+    }
+  }, [props.language]);
+
   const handleClick = async () => {
     try {
       const response = await axios.get(citationLink);
-      setCitation(response.data.translated[2]);
+      setCitation(response.data.translated[language]);
       setIsCookieModalOpen(true);
     } catch (error) {
       console.log("Error fetching data:", error);

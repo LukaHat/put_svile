@@ -1,19 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-export const QuoteGen = () => {
+export const QuoteGen = (props) => {
   const [isPoloModalOpen, setIsPoloModalOpen] = useState(false);
   const [isKhanModalOpen, setIsKhanModalOpen] = useState(false);
 
+  const [language, setLanguage] = useState(2);
+
   const [poloFact, setPoloFact] = useState("");
   const [khanFact, setKhanFact] = useState("");
+
+  useEffect(() => {
+    switch (props.language) {
+      case "en":
+        setLanguage(0);
+        break;
+      case "chi":
+        setLanguage(1);
+        break;
+      case "cro":
+      default:
+        setLanguage(2);
+        break;
+    }
+  }, [props.language]);
 
   const quoteLink =
     "https://put-svile-backend.onrender.com/api/v1/quotes/single-quote";
   const getPoloQuote = async () => {
     try {
       const response = await axios.get(`${quoteLink}/marco-polo`);
-      setPoloFact(response.data.translated[2]);
+      setPoloFact(response.data.translated[language]);
     } catch (error) {
       console.log("Error fetching data:", error);
     }
@@ -22,7 +39,7 @@ export const QuoteGen = () => {
   const getKhanQuote = async () => {
     try {
       const response = await axios.get(`${quoteLink}/kublai-khan`);
-      setKhanFact(response.data.translated[2]);
+      setKhanFact(response.data.translated[language]);
     } catch (error) {
       console.log("Error fetching data:", error);
     }

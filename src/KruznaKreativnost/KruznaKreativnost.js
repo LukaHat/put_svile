@@ -30,7 +30,11 @@ const KruznaKreativnost = () => {
   ];
 
   return (
-    <div className="kruzna-kreativnost-box" id="kruzna-kreativnost-box">
+    <div
+      className="kruzna-kreativnost-box"
+      id="kruzna-kreativnost-box"
+      name="kruzna-kreativnost-box"
+    >
       <h2 className="kruzna-kreativnost-header">{t("creativity")}</h2>
       <div className="slider-box">
         <p className="slider-text">{t("creativity-description")}</p>
